@@ -82,9 +82,9 @@ const editNoteByIdHandler = (request, h) => {
     if (index !== -1) {
         notes[index] = {
             ...notes[index],
-            title,
-            tags,
-            body,
+            title: title || notes[index].title,
+            tags: tags || notes[index].tags,
+            body: body || notes[index].body,
             updatedAt,
         };
 

@@ -14,6 +14,16 @@ npm run start
 4. Configure chrome setting <br/>
 ![Alt text](images/image-1.png)
 
+## Testing
+1. Install Newman
+```console
+npm i newman -g
+```
+2. Run Testing
+```console
+newman run .\notes-api-test.postman_collection.json --environment .\notes-api-test.postman_environment.json
+```
+
 ## **Feature**
 
 1. Web Server dapat menyimpan catatan
