@@ -11,7 +11,7 @@ npm run start
 2. Open http://notesapp-v1.dicodingacademy.com/
 3. Configure url
 ![Alt text](images/image.png)    
-4. Configure chrome setting
+4. Configure chrome setting <br/>
 ![Alt text](images/image-1.png)
 
 ## **Feature**
