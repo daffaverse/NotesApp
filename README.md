@@ -2,7 +2,7 @@
 
 ## Running App
 1. Installing
-```console
+```bash
 git clone https://github.com/Nugraha1313/notes-app-back-end.git
 cp .env.example .env
 npm i
@@ -16,11 +16,11 @@ npm run start
 
 ## Testing
 1. Install Newman
-```console
+```bash
 npm i newman -g
 ```
 2. Run Testing
-```console
+```bash
 newman run .\notes-api-test.postman_collection.json --environment .\notes-api-test.postman_environment.json
 ```
 
