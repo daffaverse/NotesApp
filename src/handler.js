@@ -22,7 +22,6 @@ const addNoteHandler = (request, h) => {
     const isSuccess = notes.filter((note) => note.id === id).length > 0;
     console.log(isSuccess);
 
-    // jika terjadi kegagalan
     if (isSuccess) {
         return h
             .response({
