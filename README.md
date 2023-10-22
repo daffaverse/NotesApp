@@ -58,7 +58,7 @@
   }
   ```
 
-2. Web Server dapat menampilkan catatan
+2. Web Server dapat menampilkan seluruh catatan
 
 - [GET] : /notes
 - Response
@@ -100,4 +100,97 @@
   }
   ```
 
-  -
+  - Not Found (404)
+
+  ```json
+  {
+    "status": "fail",
+    "message": "Catatan tidak ditemukan"
+  }
+  ```
+
+3. Web Server dapat menampilkan detail catatan
+
+- [GET] : /notes{id}
+- Response
+
+  - Success (200) -> ok
+
+  ```json
+  {
+    "status": "success",
+    "data": {
+      "note": {
+        "id": "notes-V1StGXR8_Z5jdHi6B-myT",
+        "title": "Catatan 1",
+        "createdAt": "2020-12-23T23:00:09.686Z",
+        "updatedAt": "2020-12-23T23:00:09.686Z",
+        "tags": ["Tag 1", "Tag 2"],
+        "body": "Isi dari catatan 1"
+      }
+    }
+  }
+  ```
+
+  - Not Found (404)
+
+  ```json
+  {
+    "status": "fail",
+    "message": "Catatan tidak ditemukan"
+  }
+  ```
+
+4. Web Server dapat mengubah catatan
+
+- [PUT] : /notes{id}
+- Request Body
+  ```json
+  {
+    "title": "Judul Catatan Revisi",
+    "tags": ["Tag 1", "Tag 2"],
+    "body": "Konten catatan"
+  }
+  ```
+- Response
+
+  - Success (200) -> ok
+
+  ```json
+  {
+    "status": "success",
+    "message": "Catatan berhasil diperbaharui"
+  }
+  ```
+
+  - Not Found (404)
+
+  ```json
+  {
+    "status": "fail",
+    "message": "Gagal memperbarui catatan. Id catatan tidak ditemukan"
+  }
+  ```
+
+5. Web Server dapat menghapus catatan
+
+- [DELETE] : /notes{id}
+- Response
+
+  - Success (200) -> ok
+
+  ```json
+  {
+    "status": "success",
+    "message": "Catatan berhasil dihapus"
+  }
+  ```
+
+  - Not Found (404)
+
+  ```json
+  {
+    "status": "fail",
+    "message": "Catatan gagal dihapus. Id catatan tidak ditemukan"
+  }
+  ```
