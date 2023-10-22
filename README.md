@@ -1,5 +1,19 @@
 # Notes App
 
+## Running App
+1. Installing
+```console
+git clone https://github.com/Nugraha1313/notes-app-back-end.git
+cp .env.example .env
+npm i
+npm run start
+```
+2. Open http://notesapp-v1.dicodingacademy.com/
+3. Configure url
+![Alt text](images/image.png)    
+4. Configure chrome setting
+![Alt text](images/image-1.png)
+
 ## **Feature**
 
 1. Web Server dapat menyimpan catatan
