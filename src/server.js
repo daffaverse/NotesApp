@@ -9,7 +9,7 @@ const routes = require('./routes');
 const init = async () => {
     const server = Hapi.server({
         port: PORT,
-        host: HOST,
+        host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
         // tanpa cors kita tidak dapat menyimpan data dari frontend yang deploy
         routes: {
             cors: {
